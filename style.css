@@ -59,15 +59,18 @@ h3{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-90%);
+	transform: translate(-50%,-70%);
 	visibility: hidden;
+	transition: transform .2s;
 
 }
+
 .mallet {
 	position: absolute;
 	top: -40px;
 	right: -40px;
 	transform: rotate(-15deg);
+	display: none;
 
 }
 
