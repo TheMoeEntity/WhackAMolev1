@@ -60,8 +60,17 @@ h3{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-90%);
+	visibility: hidden;
 
 }
+.mallet {
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	transform: rotate(-15deg);
+
+}
+
 footer {
 	display: flex;
 	text-align: center;

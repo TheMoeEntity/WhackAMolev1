@@ -1,4 +1,4 @@
-let rand = document.querySelector("#randNum");
+
 let rnd = 0
 let hit = 0
 let miss = 0
@@ -15,11 +15,15 @@ let whenToHide = [660,400,450,850]
 let items = document.querySelectorAll(".hide")
 let holes = document.querySelectorAll(".item")
 let flex = document.querySelector("#flex")
+let mallet = document.querySelectorAll(".mallet")
+for (var i = 0; i < mallet.length; i++) {
+	mallet[i].style.display = "none"
+}
 let didMiss = true
-
 for (var i = 0; i < items.length; i++) {
 
   items[i].style.visibility  = 'hidden'
+  holes[i].setAttribute("id", i)
 
 }
 
@@ -51,19 +55,21 @@ let setIndex = setInterval(()=>{
 },3000)
 
 
-for (hole of holes) {
-		hole.addEventListener("click", ()=> {
+
+for (var i = 0; i < holes.length; i++) {
+	holes[i].onclick = function() {
+
 				const audioContext = window.AudioContext || window.webkitAudioContext;
 				const audioCtx = new AudioContext()
+				mallet[this.id].style.display = "block"
+				setTimeout(()=>{mallet[this.id].style.display = "none"},250)
 				whack.play()
 
 			if (didMiss) {
 	  		miss++
   			document.getElementById("missed").textContent = miss
 			}
-
-			
-		})
+	}
 }
 
 
@@ -83,8 +89,6 @@ for (var i = 0; i < items.length; i++) {
   		document.getElementById("hit").textContent = hit
   		index.splice(currIndex,1)
   		setTimeout(index.push(currIndex),1000)
-
-  	} else {
 
   	}
 
