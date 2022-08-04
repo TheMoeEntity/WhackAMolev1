@@ -16,9 +16,6 @@ let items = document.querySelectorAll(".hide")
 let holes = document.querySelectorAll(".item")
 let flex = document.querySelector("#flex")
 let mallet = document.querySelectorAll(".mallet")
-// for (var i = 0; i < mallet.length; i++) {
-// 	mallet[i].style.display = "none"
-// }
 let didMiss = true
 for (var i = 0; i < items.length; i++) {
 
@@ -43,9 +40,9 @@ let setIndex = setInterval(()=>{
 			}
 			didMiss = false
 			items[rnd].style.visibility  = 'visible'
-			items[rnd].style.transform = 'translate(-50%,-100%)'	
+			items[rnd].style.transform = 'translate(-40%,-90%)'	
 				setTimeout(()=>{
-					items[rnd].style.transform = 'translate(-50%,-50%)'
+					items[rnd].style.transform = 'translate(-40%,-70%)'
 					setTimeout(()=>{items[rnd].style.visibility  = 'hidden'},100)
 					
 					didMiss = true

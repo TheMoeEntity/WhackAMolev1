@@ -7,7 +7,13 @@
 body {
 	background: #F1E3A2;
 	color: #2A0D00;
-	font-family: "Nunito" !important;
+	font-family: "Poppins", sans-serif;
+}
+@font-face {
+	font-family: FrederickatheGreat-Regular;
+	font-style: normal;
+	font-weight: normal;
+	src: url('FrederickatheGreat-Regular.ttf');
 }
 .green{
 	color: #4BB746;
@@ -19,6 +25,7 @@ h1:first-child {
 	text-align: center;
 	padding: 15px;
 	font-size: 25px;
+	font-family: 'FrederickatheGreat-Regular', Arial, sans-serif;
 }
 #flex {
 	display:  flex;
@@ -29,26 +36,32 @@ h1:first-child {
 	background: #AF9872;
 	padding: 20px 20px 40px 20px;
 	min-height: 500px;
+	border-radius: 20px;
+	box-shadow: -0.5px 2px 5px #1a1a1a;
 }
 #scoreBoard {
 	padding: 20px;
 	width: 45%;
 	height: 80px;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 15px;
 	margin-bottom: 30px;
+	font-family: 'FrederickatheGreat-Regular', Arial, sans-serif;
 }
 .item {
-	margin: 20px 10px;
-	background: #2A0D00;
-	height: 70px;
+	margin: 20px 11px;
+	height: 80px;
 	flex: 26%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	border-radius: 40px;
+
 }
+.black {
+	transform: scale(1.8);
+}
+
 h3{
 	color: whitesmoke;
 	font-size: 30px;
@@ -59,9 +72,12 @@ h3{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-70%);
-	visibility: hidden;
+	transform: translate(-40%,-70%);
+	/*visibility: hidden;*/
 	transition: transform .2s;
+	object-fit: contain;
+	-webkit-filter: drop-shadow(-5px 2px 1px #222);
+    filter: drop-shadow(-5px 2px 1px #222);
 
 }
 
@@ -72,6 +88,14 @@ h3{
 	transform: rotate(-15deg);
 	display: none;
 
+}
+.dirt {
+	z-index: 11111;
+	border-radius: 1000px;
+	background: transparent;
+	-webkit-filter: drop-shadow(-2px 0px 1px #222);
+    filter: drop-shadow(-2px 0px 1px #222);
+    
 }
 
 footer {
